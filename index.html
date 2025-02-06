@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOOK</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <a href="index.html" class="logo"><img src="img/hook.png" alt="логотип сайта"></a>
+            <h1>nook</h1>
+            <a href="#nav" class="menu-btn">&#9776;</a>
+            <div id="nav">
+                <a href="#" class="menu-btn">&times;</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ГЛАВНАЯ</a></li>
+                        <li><a href="#product-list">ТОВАРЫ</a></li>
+                        <li><a href="#contacts">КОНТАКТЫ</a></li>
+                        <li><a href="connection.html">ОБРАТНАЯ СВЯЗЬ</a></li>
+                        <li><a href="#text__base">О НАС</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container1">
+            <section class="welcome"></section>
+            <section class="product-list" id="product-list">
+                <h2 class="colection">НОВАЯ ЗИМНЯЯ КОЛЛЕКЦИЯ</h2>
+                <div class="container">
+                    <div class="product-list__card openModal">
+                        <img src="./img/jemper.jpg" alt="" class="product-list__img">
+                        <h3 class="product-list__title">5500 ₽</h3>
+                        <p class="product-list__desc">ЖЕНСКИЙ ДЖЕМПЕР <br>ПАУТИНКА ИЗ МОХЕРА</p>
+                    </div>
+
+                    <div class="product-list__card openModal">
+                        <img src="./img/head.jpg" alt="" class="product-list__img">
+                        <h3 class="product-list__title">1500 ₽</h3>
+                        <p class="product-list__desc">ШАПКА ВЯЗАНАЯ</p>
+                    </div>
+
+                    <div class="product-list__card openModal">
+                        <img src="./img/scarf.jpg" alt="" class="product-list__img">
+                        <h3 class="product-list__title">1100 ₽</h3>
+                        <p class="product-list__desc">ШАРФ ВЯЗАНЫЙ ИЗ ШЕРСТИ</p>
+                    </div>
+                    <div class="modal"> 
+                        <p>3 Это модальное окно с текстом.</p> 
+                        <button id="closeModal" class="button">Закрыть</button> 
+                    </div> 
+                     <div class="product-list__card openModal">
+                        <img src="./img/mitten.jpg" alt="" class="product-list__img">
+                        <h3 class="product-list__title">1800 ₽</h3>
+                        <p class="product-list__desc">ВАРЕЖКИ ВЯЗАНЫЕ КОСАМИ</p>
+                    </div> 
+                    <div class="modal"> 
+                        <p>4 Это модальное окно с текстом.</p> 
+                        <button id="closeModal" class="button">Закрыть</button> 
+                    </div> 
+                </div>
+            </section>
+ 
+         
+     
+            <div id="overlay"class="overlay"></div> 
+        
+            <div id="modal" class="modal"> 
+                <p>Это модальное окно с текстом.</p> 
+                <button id="closeModal" class="button">Закрыть</button> 
+            </div> 
+            <script> 
+            // const resetLink = document.querySelector('.product-list__card a');
+
+            // resetLink.addEventListener('click', function(e){
+            //     e.preventDefault();
+            // })
+
+                const openModalButton = document.querySelectorAll('.openModal');
+                const closeModalButton = document.getElementById('closeModal');
+                const modal = document.getElementById('modal');
+                const overlay = document.getElementById('overlay');
+                
+                openModalButton.forEach(item => item.addEventListener('click', function () {
+                    item.nextElementSibling.style.display = 'block';
+                    overlay.style.display = 'block';
+                
+                } )
+            )
+
+
+                closeModalButton.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                    overlay.style.display = 'none';
+                } );
+                
+                overlay.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                    overlay.style.display = 'none';
+                } );
+                
+                
+                    </script>
+
+
+            <section class="quality">
+                <div class="container">
+                    <div class="quality__card">
+                        <img src="./img/quality1.png" alt="" class="quality__img">
+                        <h2>ВЫСОКОЕ КАЧЕСТВО РУЧНОЙ РАБОТЫ</h2>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="quality__card">
+                        <img src="./img/quality3.png" alt="" class="quality__img">
+                        <h2>ЗАКАЗ ПО СВОЕМУ ФОТО ИЛИ ЭСКИЗУ</h2>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="quality__card">
+
+                        <img src="./img/quality4.png" alt="" class="quality__img">
+                        <h2>ДОСТАВКА В ЛЮБУЮ ТОЧКУ РФ</h2>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text__base" id="text__base">
+                <p>
+                    <b>Добро пожаловать на сайт, посвященный уникальным вязаным изделиям на заказ! Здесь вы можете найти
+                    разнообразные вязаные вещи, созданные с любовью и вниманием к деталям.
+                    На нашем сайте вы можете выбрать материалы, цвета и дизайн. Каждое изделие создается индивидуально, что
+                    позволяет вам получить именно то, что вы хотите.
+                    Уникальные дизайны, разработанные по вашим пожеланиям.
+                    Высокое качество выполнения и материалов.
+                    Станьте владельцем эксклюзивного вязаного изделия, созданного специально для вас!</b>
+                </p>
+            </div>
+    
+            <hr>
+
+            <div class="contacts__table" id="contacts">
+                <div class="contacts__table-no">
+                    <div class="name">NOOK</div>
+                    <div class="text">г. ЛИПЕЦК ул. ПУШКИНА д.15А</div>
+                    <div class="phone__mail">
+                        <div class="phone">+78923456781</div>
+                        <div class="email">
+                            <a href="#">nook@mail.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </div>
+
+        
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__socials">
+            <a class="footer__socials-link" href="#"><img src="../src/img/pin.png" alt=""></a>
+            <a class="footer__socials-link" href="#"><img src="../src/img/tg.png" alt=""></a>
+            <a class="footer__socials-link" href="#"><img src="../src/img/vk.png" alt=""></a>
+        </div>
+    </footer>
+
+
+   
+</body>
+
+</html>
